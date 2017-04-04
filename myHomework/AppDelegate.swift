@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Parse.initialize(with: configuration)
             
             return true
-         
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
