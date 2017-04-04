@@ -15,16 +15,22 @@ class SchoolEvent: PFObject, PFSubclassing {
     @NSManaged var schoolEventDescription   :String?
     @NSManaged var schoolEventDueDate       :Date?
     @NSManaged var schoolEventReminderDate  :Date?
-    @NSManaged var schoolEventStatus        :Bool?
+    @NSManaged var schoolEventStatus        :Bool
     
     convenience init(eventName: String, eventDescription: String, eventDueDate: Date, eventReminderDate: Date, eventStatus: Bool) {
-        super.init()
+        self.init()
         
         schoolEventName = eventName
         schoolEventDescription = eventDescription
         schoolEventDueDate = eventDueDate
         schoolEventReminderDate = eventReminderDate
         schoolEventStatus = eventStatus
+        
+    }
+    
+    static func parseClassName() -> String {
+        
+        return "SchoolEvent"
         
     }
 
